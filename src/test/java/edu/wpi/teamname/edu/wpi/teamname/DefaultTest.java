@@ -4,8 +4,8 @@
 
 package edu.wpi.teamname;
 
-import org.junit.Test;
 import org.junit.Assert;
+import org.junit.Test;
 
 // import org.junit.jupiter.api.Test; (JUnit 5 equivalent)
 
@@ -36,27 +36,26 @@ public class DefaultTest {
   }
 
   @Test
-  public void testCirclePerimeterZero(){
+  public void testCirclePerimeterZero() {
     Circle circ = new Circle(0);
     Assert.assertTrue(circ.getPerimeter() == 0);
   }
 
   @Test
-  public void testCirclePerimeter(){
+  public void testCirclePerimeter() {
     Circle circ = new Circle(3);
-    Assert.assertTrue(circ.getPerimeter() == 2*3*Math.PI);
+    Assert.assertTrue(circ.getPerimeter() == 2 * 3 * Math.PI);
   }
 
   @Test
-  public void testCircleAreaZero(){
+  public void testCircleAreaZero() {
     Circle circ = new Circle(0);
     Assert.assertTrue(circ.getArea() == 0);
   }
 
   @Test
-  public void testCircleArea(){
+  public void testCircleArea() {
     Circle circ = new Circle(3);
-    Assert.assertTrue(circ.getArea() == 9*Math.PI);
+    Assert.assertTrue(circ.getArea() == 9 * Math.PI);
   }
-
 }
