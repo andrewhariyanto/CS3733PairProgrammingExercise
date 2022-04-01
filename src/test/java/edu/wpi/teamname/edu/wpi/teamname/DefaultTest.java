@@ -25,12 +25,12 @@ public class DefaultTest {
   @Test
   public void testRectangleArea() {
     Rectangle rect = new Rectangle(10, 20);
-    assert (rect.getPerimeter() == 200.0);
+    assert (rect.getArea() == 200.0);
   }
 
   @Test
   public void testRectangleAreaZero() {
     Rectangle rect = new Rectangle(10, 0);
-    assert (rect.getPerimeter() == 0.0);
+    assert (rect.getArea() == 0.0);
   }
 }
