@@ -5,6 +5,7 @@
 package edu.wpi.teamname;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 // import org.junit.jupiter.api.Test; (JUnit 5 equivalent)
@@ -57,5 +58,37 @@ public class DefaultTest {
   public void testCircleArea() {
     Circle circ = new Circle(3);
     Assert.assertTrue(circ.getArea() == 9 * Math.PI);
+  }
+
+  FizzBuzz fb;
+
+  @Before
+  public void init() {
+    fb = new FizzBuzz();
+  }
+
+  @Test
+  public void testFizzBuzzDivisible3() {
+    Assert.assertTrue(fb.answer(6) == "fizz");
+  }
+
+  @Test
+  public void testFizzBuzzDivisible5() {
+    Assert.assertTrue(fb.answer(10) == "buzz");
+  }
+
+  @Test
+  public void testFizzBuzzDivisible3AND5() {
+    Assert.assertTrue(fb.answer(15) == "fizzbuzz");
+  }
+
+  @Test
+  public void testFizzBuzzDivisibleNone1() {
+    Assert.assertTrue(fb.answer(2).equals("2"));
+  }
+
+  @Test
+  public void testFizzBuzzDivisibleNone2() {
+    Assert.assertTrue(fb.answer(11).equals("11"));
   }
 }
